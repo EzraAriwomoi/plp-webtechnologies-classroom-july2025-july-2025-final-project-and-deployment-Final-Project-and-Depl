@@ -78,17 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Close mobile menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".main-nav")) {
-      const navLists = document.querySelectorAll(".nav-list");
-      const menuToggles = document.querySelectorAll(".menu-toggle");
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navList = document.getElementById("mobileNav");
+  const overlay = document.querySelector(".nav-overlay");
 
-      navLists.forEach((nav) => nav.classList.remove("show"));
-      menuToggles.forEach((toggle) =>
-        toggle.setAttribute("aria-expanded", "false")
-      );
-    }
+  menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("show");
+    menuToggle.classList.toggle("active");
+    overlay.classList.toggle("show");
   });
+
+  overlay.addEventListener("click", () => {
+    navList.classList.remove("show");
+    menuToggle.classList.remove("active");
+    overlay.classList.remove("show");
+  });
+});
 
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
