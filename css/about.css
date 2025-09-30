@@ -1,0 +1,136 @@
+.about {
+  padding: 3em 0;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 2.2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2em;
+  align-items: start;
+}
+
+.about-photo img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow-light);
+}
+
+.about-content {
+  font-size: 1.05rem;
+}
+
+.about-content .lead {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  color: var(--text-secondary);
+}
+
+.about-content h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.skills li {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1em;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.skills li:hover {
+  background: var(--bg-card);
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.skill-category h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.8em;
+  font-size: 1.2rem;
+}
+
+.experience {
+  margin-top: 2em;
+}
+
+.job {
+  margin-bottom: 2em;
+  padding: 1.5em;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  transition: background-color 0.3s ease;
+}
+
+.job h3 {
+  margin: 0 0 0.3em 0;
+  color: var(--text-primary);
+}
+
+.company {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.job ul li {
+  list-style: disc;
+  margin-bottom: 0.4em;
+  color: var(--text-secondary);
+}
+
+.education {
+  margin: 1em 0;
+  padding-left: 1.2em;
+}
+
+.education li {
+  list-style: disc;
+  margin-bottom: 0.8em;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-bottom: 1.5em;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
